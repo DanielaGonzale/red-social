@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreativaShare - Tu red social creativa</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Nuestro CSS personalizado -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-palette me-2"></i>CreativaShare
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html"><i class="fas fa-home me-1"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="explorar.html"><i class="fas fa-search me-1"></i> Explorar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-bell me-1"></i> Notificaciones</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            <img src="https://i.pinimg.com/736x/e9/f1/a8/e9f1a83f2519c46e07f01ba3b1396b83.jpg" class="user-avatar me-1" alt="Avatar">
+                            Daniela Gonzalez
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="perfil.html"><i class="fas fa-user me-2"></i>Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Configuración</a></li>
+                            <li><a class="dropdown-item" href="guardados.html"><i class="fas fa-bookmark me-2"></i>Publicaciones guardadas</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i>Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="container my-4">
+        <div class="row">
+            <!-- Columna izquierda: Perfil y filtros -->
+            <aside class="col-lg-3">
+                <!-- Sección de perfil -->
+                <section class="profile-section">
+                    <img src="https://i.pinimg.com/736x/e9/f1/a8/e9f1a83f2519c46e07f01ba3b1396b83.jpg" class="profile-avatar" alt="Avatar de usuario">
+                    <h5>Daniela Gonzalez</h5>
+                    <p class="text-muted">@SkyniDragon</p>
+                    <div class="d-flex justify-content-around mt-3">
+                        <div class="text-center">
+                            <h6 class="mb-0">245</h6>
+                            <small class="text-muted">Publicaciones</small>
+                        </div>
+                        <div class="text-center">
+                            <h6 class="mb-0">1.2K</h6>
+                            <small class="text-muted">Seguidores</small>
+                        </div>
+                        <div class="text-center">
+                            <h6 class="mb-0">568</h6>
+                            <small class="text-muted">Siguiendo</small>
+                        </div>
+                    </div>
+                    <a href="perfil.html" class="btn btn-outline-primary w-100 mt-3">Ver mi perfil</a>
+                </section>
+
+                <!-- Sección de filtros -->
+                <section class="filter-container">
+                    <h5>Filtrar publicaciones</h5>
+                    <div class="mb-3">
+                        <label for="categoryFilter" class="form-label">Categoría</label>
+                        <select id="categoryFilter" class="form-select">
+                            <option value="all">Todas las categorías</option>
+                            <option value="art">Arte</option>
+                            <option value="photography">Fotografía</option>
+                            <option value="design">Diseño</option>
+                            <option value="crafts">Manualidades</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dateFilter" class="form-label">Fecha</label>
+                        <select id="dateFilter" class="form-select">
+                            <option value="all">Todas las fechas</option>
+                            <option value="today">Hoy</option>
+                            <option value="week">Esta semana</option>
+                            <option value="month">Este mes</option>
+                        </select>
+                    </div>
+                    <button id="applyFilters" class="btn btn-primary w-100">Aplicar filtros</button>
+                </section>
+
+                <!-- Sección para subir imágenes -->
+                <section class="upload-section">
+                    <h5>Comparte tu creatividad</h5>
+                    <form id="uploadForm">
+                        <div class="mb-3">
+                            <label for="imageUpload" class="form-label">Selecciona una imagen</label>
+                            <input class="form-control" type="file" id="imageUpload" accept="image/*">
+                        </div>
+                        <div class="mb-3">
+                            <label for="imageDescription" class="form-label">Descripción</label>
+                            <textarea class="form-control" id="imageDescription" rows="3" placeholder="Describe tu publicación..."></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="imageCategory" class="form-label">Categoría</label>
+                            <select id="imageCategory" class="form-select">
+                                <option value="art">Arte</option>
+                                <option value="photography">Fotografía</option>
+                                <option value="design">Diseño</option>
+                                <option value="crafts">Manualidades</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Publicar</button>
+                    </form>
+                </section>
+            </aside>
+
+            <!-- Columna central: Feed de publicaciones -->
+            <section class="col-lg-6">
+                <header class="d-flex justify-content-between align-items-center mb-4">
+                    <h2>Feed creativo</h2>
+                    <div class="btn-group">
+                        <button class="btn btn-outline-primary active" data-sort="recent">Más recientes</button>
+                        <button class="btn btn-outline-primary" data-sort="popular">Más populares</button>
+                    </div>
+                </header>
+
+                <!-- Publicaciones se cargarán aquí dinámicamente -->
+                <div id="postsContainer">
+                    <!-- Las publicaciones se cargan aquí mediante JavaScript -->
+                </div>
+            </section>
+
+            <!-- Columna derecha: Sugerencias y datos de API -->
+            <aside class="col-lg-3">
+                <!-- Sugerencias de usuarios -->
+                <section class="filter-container">
+                    <h5>Usuarios sugeridos</h5>
+                    <div id="suggestedUsers">
+                        <!-- Los usuarios sugeridos se cargarán aquí -->
+                    </div>
+                </section>
+                        <!-- Los datos de la API se cargarán aquí -->
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Modal para comentarios -->
+    <div class="modal fade" id="commentsModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Comentarios</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="commentsModalBody">
+                    <!-- Los comentarios se cargarán aquí -->
+                </div>
+                <div class="modal-footer">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="newComment" placeholder="Escribe un comentario...">
+                        <button class="btn btn-primary" type="button" id="addCommentBtn">Comentar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>CreativaShare</h5>
+                    <p>La red social para compartir tu creatividad con el mundo.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Enlaces útiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Acerca de nosotros</a></li>
+                        <li><a href="#" class="text-white">Términos de servicio</a></li>
+                        <li><a href="#" class="text-white">Política de privacidad</a></li>
+                        <li><a href="#" class="text-white">Centro de ayuda</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Conéctate con nosotros</h5>
+                    <div class="d-flex">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p>&copy; 2023 CreativaShare. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+   
+    <!-- Nuestro JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>

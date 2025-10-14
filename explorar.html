@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar - CreativaShare</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Nuestro CSS personalizado -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-palette me-2"></i>CreativaShare
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="explorar.html"><i class="fas fa-search me-1"></i> Explorar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-bell me-1"></i> Notificaciones</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            <img src="https://i.pinimg.com/736x/e9/f1/a8/e9f1a83f2519c46e07f01ba3b1396b83.jpg" class="user-avatar me-1" alt="Avatar">
+                            Daniela gonzalez
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="perfil.html"><i class="fas fa-user me-2"></i>Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Configuración</a></li>
+                            <li><a class="dropdown-item" href="guardados.html"><i class="fas fa-bookmark me-2"></i>Publicaciones guardadas</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i>Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="container my-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <header class="text-center mb-5">
+                    <h1>Explorar CreativaShare</h1>
+                    <p class="lead">Descubre artistas increíbles y nuevas inspiraciones</p>
+                </header>
+
+                <!-- Barra de búsqueda -->
+                <section class="search-section mb-5">
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control" id="searchInput" placeholder="Buscar usuarios...">
+                        <button class="btn btn-primary" type="button" id="searchButton">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Resultados de búsqueda -->
+                <section id="searchResults" class="mb-5">
+                    <h3 class="mb-4">Usuarios populares</h3>
+                    <div id="usersContainer" class="row">
+                        <!-- Los usuarios se cargarán aquí -->
+                    </div>
+                </section>
+
+                <!-- Categorías -->
+                <section id="categoriesSection">
+                    <h3 class="mb-4">Explorar por categorías</h3>
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <div class="card category-card text-center">
+                                <div class="card-body">
+                                    <i class="fas fa-paint-brush fa-3x mb-3 text-primary"></i>
+                                    <h5>Arte</h5>
+                                    <p class="text-muted">Pintura, dibujo y más</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="card category-card text-center">
+                                <div class="card-body">
+                                    <i class="fas fa-camera fa-3x mb-3 text-primary"></i>
+                                    <h5>Fotografía</h5>
+                                    <p class="text-muted">Imágenes y momentos</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="card category-card text-center">
+                                <div class="card-body">
+                                    <i class="fas fa-pencil-ruler fa-3x mb-3 text-primary"></i>
+                                    <h5>Diseño</h5>
+                                    <p class="text-muted">Grágico y digital</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <div class="card category-card text-center">
+                                <div class="card-body">
+                                    <i class="fas fa-hands fa-3x mb-3 text-primary"></i>
+                                    <h5>Manualidades</h5>
+                                    <p class="text-muted">Creaciones hechas a mano</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>CreativaShare</h5>
+                    <p>La red social para compartir tu creatividad con el mundo.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Enlaces útiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Acerca de nosotros</a></li>
+                        <li><a href="#" class="text-white">Términos de servicio</a></li>
+                        <li><a href="#" class="text-white">Política de privacidad</a></li>
+                        <li><a href="#" class="text-white">Centro de ayuda</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Conéctate con nosotros</h5>
+                    <div class="d-flex">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p>&copy; 2023 CreativaShare. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Nuestro JavaScript -->
+    <script src="js/explorar.js"></script>
+</body>
+</html>

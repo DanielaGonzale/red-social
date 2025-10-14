@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de María García - CreativaShare</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Nuestro CSS personalizado -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-palette me-2"></i>CreativaShare
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="explorar.html"><i class="fas fa-search me-1"></i> Explorar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-bell me-1"></i> Notificaciones</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            <img src="https://i.pinimg.com/736x/e9/f1/a8/e9f1a83f2519c46e07f01ba3b1396b83.jpg" class="user-avatar me-1" alt="Avatar">
+                            Daniela Gonzalez
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="perfil.html"><i class="fas fa-user me-2"></i>Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Configuración</a></li>
+                            <li><a class="dropdown-item" href="guardados.html"><i class="fas fa-bookmark me-2"></i>Publicaciones guardadas</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i>Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="container my-4">
+        <!-- Encabezado del perfil -->
+        <section class="profile-header mb-5">
+            <div class="row align-items-center">
+                <div class="col-md-3 text-center">
+                    <img src="https://i.pinimg.com/736x/e9/f1/a8/e9f1a83f2519c46e07f01ba3b1396b83.jpg" class="profile-avatar-large" alt="Avatar de Daniela Gonzalez">
+                </div>
+                <div class="col-md-9">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <h1>Daniela Gonzalez</h1>
+                            <p class="text-muted">@SkyniDragon</p>
+                            <p class="lead">Artista digital y fotógrafa amateur. Amante del arte y la creatividad en todas sus formas.</p>
+                            <div class="d-flex mb-3">
+                                <span class="badge bg-primary me-2">Arte</span>
+                                <span class="badge bg-primary me-2">Fotografía</span>
+                                <span class="badge bg-primary">Diseño</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-primary">Editar perfil</button>
+                    </div>
+                    <div class="d-flex justify-content-around mt-4">
+                        <div class="text-center">
+                            <h4 class="mb-0">245</h4>
+                            <small class="text-muted">Publicaciones</small>
+                        </div>
+                        <div class="text-center">
+                            <h4 class="mb-0">1,245</h4>
+                            <small class="text-muted">Seguidores</small>
+                        </div>
+                        <div class="text-center">
+                            <h4 class="mb-0">568</h4>
+                            <small class="text-muted">Siguiendo</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publicaciones del usuario -->
+        <section>
+            <h2 class="mb-4">Mis publicaciones</h2>
+            <div class="row" id="userPosts">
+                <!-- Las publicaciones del usuario se cargarán aquí -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>CreativaShare</h5>
+                    <p>La red social para compartir tu creatividad con el mundo.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Enlaces útiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Acerca de nosotros</a></li>
+                        <li><a href="#" class="text-white">Términos de servicio</a></li>
+                        <li><a href="#" class="text-white">Política de privacidad</a></li>
+                        <li><a href="#" class="text-white">Centro de ayuda</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Conéctate con nosotros</h5>
+                    <div class="d-flex">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p>&copy; 2023 CreativaShare. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+   
+    <!-- Nuestro JavaScript -->
+    <script src="js/perfil.js"></script>
+</body>
+</html>
+
